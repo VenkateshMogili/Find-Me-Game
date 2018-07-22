@@ -1,0 +1,33 @@
+/*Designed by Venkatesh Mogili,N130010 Powered by AmmaNanna*/
+/*SF-2 CSE*/
+#ggame{-webkit-animation:v 2s 1;animation:v 2s 1;}
+@-webkit-keyframes v{
+	50%{width:10%;height:0px;-webkit-transform:rotate(1440deg);}
+	80%{width:80%;height:80px;}
+	100%{width:100%;height:100%;-webkit-transform:rotate(1440deg);}
+}
+@-moz-keyframes v{
+	50%{width:10%;height:0px;}
+	80%{width:80%;height:80px;}
+	100%{width:100%;height:100%;}
+}
+@keyframes v{
+	50%{width:10%;height:0px;}
+	80%{width:80%;height:80px;}
+	100%{width:100%;height:100%;}
+}
+a:hover{text-decoration:none;color:green;}
+.hi{color:black;font-family:verdana;text-shadow:0px 0px 4px white;}
+.hii{color:white;font-family:arial;text-shadow:1px 2px 3px black;}
+#errors{background-color:red;font-size:20px;font-family:verdana;color:white;}
+.hints{background-color:#339955;width:50%;}
+.task1{background-color:#339944;width:50%;}
+table{width:400px;height:400px;}
+td{text-align:center;}
+#i1,#i2,#i3,#d1,#d2,#d3,#im{text-align:center;padding:5px;width:50px;height:50px;border-radius:100px;border:1px solid black;font-size:20px;color:red;}
+input:focus{border-radius:100px;border:1px solid red;}
+.start{padding:5px;font-size:20px;font-family:arial;border-radius:5px;border:1px solid lightgray;width:200px;}
+.start:hover{color:green;cursor:pointer;border-bottom:4px solid teal;}
+#submi,#next{padding:5px;font-size:20px;font-family:arial;border-radius:5px;border:1px solid lightgray;}
+#submi:hover,#next:hover{color:green;cursor:pointer;border-bottom:4px solid teal;}
+.task1{display:none;}

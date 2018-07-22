@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Find me</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="js/style.css">
+</head>
+<body>
+<!--game-1-->
+<div id="game">
+</div>
+<div id="ggame">
+<center>
+<img src="find me.png" class="logo"><br>
+<button class="start" onclick="window.history.back()">Go Back</button>
+<button class="start" onclick="start()">Start....A-Level</button>
+</center>
+</div>
+<div>
+<center><div class="task1">
+<caption><h3 style="color:white;font-family:arial;text-shadow:1px 2px 3px black;">A-Level</h3></caption>
+<table>
+<tr>
+<td>
+<input type="text" id="i1">
+</td>
+<td>
+<input type="text" id="i2">
+</td>
+<td>
+<input type="text" id="i3">
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+<p style="font-size:40px;-webkit-transform:rotate(40deg);margin-right:170px;margin-bottom:10px;">&larr;</p>
+<p style="font-size:40px;-webkit-transform:rotate(90deg);margin-left:10px;margin-bottom:10px;margin-top:-60px;">&larr;</p>
+<p style="font-size:40px;-webkit-transform:rotate(130deg);margin-left:170px;margin-bottom:20px;margin-top:-50px;">&larr;</p>
+<input type="text" id="im" value="A" style="padding:30px;text-align:center;" disabled>
+<p style="font-size:40px;-webkit-transform:rotate(130deg);margin-right:170px;margin-bottom:10px;">&rarr;</p>
+<p style="font-size:40px;-webkit-transform:rotate(90deg);margin-left:10px;margin-bottom:10px;margin-top:-50px;">&rarr;</p>
+<p style="font-size:40px;-webkit-transform:rotate(40deg);margin-left:170px;margin-bottom:10px;margin-top:-70px;">&rarr;</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<input type="text" id="d1">
+</td>
+<td>
+<input type="text" id="d2">
+</td>
+<td>
+<input type="text" id="d3">
+</td>
+</tr>
+</table>
+</div>
+<div class="hints">
+<div id="errors"></div>
+<p><i class="hii">Hints:</i> <b class="hi"> 1.Pilli, 2.Eluka, 3.Pichchi.</b></p>
+<div id="n"><button onclick="result1()" id="submi">Submit Answers</button></div>
+</div>
+</center>
+</div>
+
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script src="js/jscript.js"></script>
+<script>
+function result1(){
+	a=document.getElementById("i1").value;
+	b=document.getElementById("i2").value;
+	c=document.getElementById("i3").value;
+	d=document.getElementById("d1").value;
+	e=document.getElementById("d2").value;
+	f=document.getElementById("d3").value;
+	g=document.getElementById("im").value;
+	if (a=="" && b=="" && c=="" && d=="" && e=="" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill with answers and submit again";
+	}
+	if (a=="C" || a=="c" && b=="" && c=="" && d=="" && e=="" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (a=="C" || a=="c" && b=="R" || b=="r" && c=="" && d=="" && e=="" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (a=="C" || a=="c" && b=="R" || b=="r" && c=="M" || c=="m" && d=="" && e=="" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (a=="C" || a=="c" && b=="R" || b=="r" && c=="M" || c=="m" && d=="D" || d=="d" && e=="" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (a=="C" || a=="c" && b=="R" || b=="r" && c=="M" || c=="m" && d=="D" || d=="d" && e=="T" || e=="t" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (a=="C" || a=="c" && b=="R" || b=="r" && c=="M" || c=="m" && d=="D" || d=="d" && e=="T" || e=="t" && f=="T" || f=="t" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (b=="R" || b=="r" && a=="" && c=="" && d=="" && e=="" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (c=="T" || b=="t" && a=="" && b=="" && d=="" && e=="" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (d=="D" || d=="d" && a=="" && b=="" && c=="" && e=="" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (e=="T" || e=="t" && a=="" && b=="" && c=="" && d=="" && f=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if (f=="T" || f=="t" && a=="" && b=="" && c=="" && d=="" && e=="" && g=="A")
+	{
+	document.getElementById("errors").innerHTML="Fill all the blanks correctly";
+	}
+	if ((a=="C" || a=="c") && (b=="R" || b=="r") && (c=="M" || c=="m") && (d=="D" || d=="d") && (e=="T" || e=="t") && (f=="T" || f=="t") && (g=="A"))
+	{
+	document.getElementById("errors").innerHTML="Good Correct Answer....Go for next level";
+	document.getElementById("n").innerHTML="<button title='level B' onclick='n2()' id='next'>Next Level-B--></button>";
+	}
+}
+function n2(){	
+	document.getElementById("errors").innerHTML="Wait for 5 seconds.....";
+	document.getElementById("game").innerHTML="<meta http-equiv='refresh' content='5;url=B.html'>";
+
+}
+</script>
